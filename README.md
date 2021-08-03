@@ -21,7 +21,10 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 Sample Output
 
 ```
-//ToDo
+08/03/2021 16:06:00 => [Debug] Execution started for project: RPADev-S05P01-PasswordGenerator
+08/03/2021 16:06:02 => [Info] RPADev-S05P01-PasswordGenerator execution started
+08/03/2021 16:06:08 => [Debug] A password has been generated [Length: 24, UseLowerCase: True, UseNumbers: True, UseSymbols: True, UseUppercase: True]: EaEM%29+-C&s2c-DdI3)P@#J
+08/03/2021 16:06:08 => [Info] RPADev-S05P01-PasswordGenerator execution ended in: 00:00:06
 ```
 
 ### Notes
