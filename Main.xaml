@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="948,6113" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1823,6897" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -30,6 +30,10 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -67,12 +71,14 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="The challenge is to use the Recorder and create an automation to generate a strong password.&#xD;&#xA;The provided website address is: https://www.rpasamples.com/passwordgenerator&#xD;&#xA;This project uses Mozilla Firefox&#xD;&#xA;" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="800,5948" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="The challenge is to use the Recorder and create an automation to generate a strong password.&#xA;The provided website address is: https://www.rpasamples.com/passwordgenerator&#xA;This project uses Mozilla Firefox&#xA;" DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="800,6732" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="passwordLength" />
       <Variable x:TypeArguments="x:Boolean" Name="useUpperCase" />
@@ -147,9 +153,9 @@
         </Assign.Value>
       </Assign>
     </Sequence>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="758,5150" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="758,5934" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence Browser" sap:VirtualizedContainerService.HintSize="720,4923" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence DisplayName="Sequence Browser" sap:VirtualizedContainerService.HintSize="720,5707" sap2010:WorkflowViewState.IdRef="Sequence_30">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="chkLower" />
             <Variable x:TypeArguments="x:Boolean" Name="chkUpper" />
@@ -162,25 +168,25 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:OpenBrowser CommunicationMethod="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="678,4831" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Url="https://www.rpasamples.com/passwordgenerator">
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="678,5615" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" NewSession="True" Url="https://www.rpasamples.com/passwordgenerator">
             <ui:OpenBrowser.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,4730" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,5514" sap2010:WorkflowViewState.IdRef="Sequence_29">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'PasswordG Page'" sap:VirtualizedContainerService.HintSize="602,4638" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="7e6815398e326eb10fd3c28e3698258a" Selector="&lt;html app='firefox.exe' title='Password Generator' /&gt;">
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Attach Browser 'PasswordG Page'" sap:VirtualizedContainerService.HintSize="602,5422" sap2010:WorkflowViewState.IdRef="BrowserScope_6" InformativeScreenshot="7e6815398e326eb10fd3c28e3698258a" Selector="&lt;html app='firefox.exe' title='Password Generator' /&gt;">
                     <ui:BrowserScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="568,4492" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                        <Sequence DisplayName="Do Browser Items" sap:VirtualizedContainerService.HintSize="568,5276" sap2010:WorkflowViewState.IdRef="Sequence_28">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,7 +269,7 @@
                               </ui:GetAttribute.Target>
                             </ui:GetAttribute>
                           </Sequence>
-                          <Sequence DisplayName="Sequence Web Populate Values" sap:VirtualizedContainerService.HintSize="526,372" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                          <Sequence DisplayName="Sequence Web Populate Length" sap:VirtualizedContainerService.HintSize="526,372" sap2010:WorkflowViewState.IdRef="Sequence_25">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -297,10 +303,11 @@
                               </ui:TypeInto.Text>
                             </ui:TypeInto>
                           </Sequence>
-                          <Sequence DisplayName="Sequence Toggle Checkboxes" sap:VirtualizedContainerService.HintSize="526,2628" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                          <Sequence sap2010:Annotation.AnnotationText="If the checkbox needs to be toggled, these if-statements will process.  The two points of evaluation are the parameters and the checkbox states." DisplayName="Sequence Toggle Checkboxes" sap:VirtualizedContainerService.HintSize="526,2670" sap2010:WorkflowViewState.IdRef="Sequence_26">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If DisplayName="If UseLowerCaase &amp; !ChkLower" sap:VirtualizedContainerService.HintSize="484,282" sap2010:WorkflowViewState.IdRef="If_14">
@@ -499,10 +506,11 @@
                               </If.Then>
                             </If>
                           </Sequence>
-                          <Sequence DisplayName="Sequence Submit" sap:VirtualizedContainerService.HintSize="526,344" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <Sequence sap2010:Annotation.AnnotationText="Generate and copy the password." DisplayName="Sequence Generate &amp; Submit" sap:VirtualizedContainerService.HintSize="526,375" sap2010:WorkflowViewState.IdRef="Sequence_27">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
@@ -532,11 +540,59 @@
                               </ui:GetValue.Value>
                             </ui:GetValue>
                           </Sequence>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="526,61" sap2010:WorkflowViewState.IdRef="WriteLine_6">
-                            <InArgument x:TypeArguments="x:String">
-                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">"A password has been generated [Length: " + passwordLength + ", UseLowerCase: " + useLowerCase + ", UseNumbers: " + useNumbers + ", UseSymbols: " + useSymbols + ", UseUppercase: " + useUpperCase + "]: " + passwordText</mca:CSharpValue>
-                            </InArgument>
-                          </WriteLine>
+                          <Sequence sap2010:Annotation.AnnotationText="Paste the password to notepad and also to the console." DisplayName="Sequence Output" sap:VirtualizedContainerService.HintSize="526,772" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:SetToClipboard sap2010:Annotation.AnnotationText="This may not be needed as the clipboard will already contain the password but this step is included to be clear." ContinueOnError="True" DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="434,116" sap2010:WorkflowViewState.IdRef="SetToClipboard_1">
+                              <ui:SetToClipboard.Text>
+                                <InArgument x:TypeArguments="x:String">
+                                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_67">passwordText</mca:CSharpValue>
+                                </InArgument>
+                              </ui:SetToClipboard.Text>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:SetToClipboard>
+                            <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'notepad.exe RPADev-S05P...'" FileName="C:\\Windows\\System32\\notepad.exe" sap:VirtualizedContainerService.HintSize="434,493" sap2010:WorkflowViewState.IdRef="OpenApplication_1" InformativeScreenshot="1dc4ea14d35247dd9230ab5792cbc295" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Untitled - Notepad' /&gt;">
+                              <ui:OpenApplication.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do Paste" sap:VirtualizedContainerService.HintSize="376,347" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ContinueOnError="True" DelayBefore="1000" DisplayName="Send Hotkey 'editable text'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="v" KeyModifiers="Ctrl" SpecialKey="False">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="aa1f3ead-8f5b-4620-ba4f-3bfa222e5dff" InformativeScreenshot="c6056ef8b69ac7b3b1fc341e3d886055" Selector="&lt;wnd aaname='Horizontal' cls='Edit' /&gt;&lt;ctrl name='Text Editor' role='editable text' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                    </ui:SendHotkey>
+                                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="WriteLine_6">
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">"A password has been generated [Length: " + passwordLength + ", UseLowerCase: " + useLowerCase + ", UseNumbers: " + useNumbers + ", UseSymbols: " + useSymbols + ", UseUppercase: " + useUpperCase + "]: " + passwordText</mca:CSharpValue>
+                                      </InArgument>
+                                    </WriteLine>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:OpenApplication.Body>
+                            </ui:OpenApplication>
+                          </Sequence>
                         </Sequence>
                       </ActivityAction>
                     </ui:BrowserScope.Body>
