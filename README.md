@@ -8,6 +8,20 @@ This project is my solution in **C#** to the **Password Generator** practice fou
 
 After making a pull request or downloading the project, open the Main.xaml in UiPath Studio.  The robot can be run with the play button in the ribbon and the result can be seen in output pane.
 
+#### PRACTICE REQUIREMENTS
+
+###### Generate a Strong Password
+
+First, you need to open the https://www.rpasamples.com/passwordgenerator website.
+
+Second, you need to generate a password with 12 characters and no symbols.
+
+Third, you need to click on the Copy to Clipboard button.
+
+Open an empty Notepad window.
+
+Lastly, paste the password inside Notepad using the CTRL+V keyboard shortcut.
+
 ### Details
 
 **Course:** UiPath - RPA Developer Foundation
